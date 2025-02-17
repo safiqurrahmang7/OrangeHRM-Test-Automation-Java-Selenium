@@ -26,7 +26,7 @@ public class AdminCreation extends BaseTest{
 	public void UserCreationTest(HashMap<String,String> fullName) throws AWTException, InterruptedException {
 	
 		
-		//Username
+		//UserName
 		String[] name = fullName.get("userName").split(" ");
 		
 		String first_name = name[0];
