@@ -10,7 +10,7 @@
         <methods>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="UserCreationTest" invocation-numbers="0"/>
+          <include name="UserCreationTest" invocation-numbers="1"/>
         </methods>
       </class> <!-- OrangeHRM.Tests.AdminCreation -->
     </classes>
