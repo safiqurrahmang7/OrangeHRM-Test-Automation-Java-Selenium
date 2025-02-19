@@ -71,8 +71,8 @@ This project is licensed under the MIT License.
 
 ## 👤 Author
 **Safiqur Rahman**  
-📧 [your.email@example.com](mailto:safiqurrahmang7@example.com)  
-🌐 [LinkedIn](https://linkedin.com/in/safiqurrahman)  
+📧 [safiqurrahmang7@gmail.com](mailto:safiqurrahmang7@gmail.com)  
+🌐 [LinkedIn](www.linkedin.com/in/safiqurrahmansoftwareengineer)  
 📌 GitHub: [safiqurrahmang7](https://github.com/safiqurrahmang7)
 
 ---
