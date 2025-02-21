@@ -45,13 +45,13 @@ public class StepDeifnitionsBase extends BaseTest{
 		pim.save_emp();
 	}
 	
-	@When ("create the Admin with username {string}")
-	public void add_admin_with_username(String fullName) throws AWTException, InterruptedException {
+	@When ("create the Admin with {string} and {string}")
+	public void add_admin_with_username(String fullName,String password) throws AWTException, InterruptedException {
 		String[] name = fullName.split(" ");
 		
 		String first_name = name[0];
 		admin = pim.goToAdmin();
-		admin.add_admin_with_userName(fullName,first_name);
+		admin.add_admin_with_userName(fullName,first_name,password);
 	}
 	
 	@Then("Toaster Message should be displayed as {string}")
