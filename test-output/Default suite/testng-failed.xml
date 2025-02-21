@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="OrangeHRM.Cucumber.RegressionTestRunner">
+      <class name="OrangeHRM.Tests.UserManagementTest">
         <methods>
-          <include name="setUpClass"/>
-          <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
+          <include name="createAdminTest"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- OrangeHRM.Cucumber.RegressionTestRunner -->
+      </class> <!-- OrangeHRM.Tests.UserManagementTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

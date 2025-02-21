@@ -1,0 +1,7 @@
+OrangeHRM\resuorces\ExtentreportNG.class
+OrangeHRM\Tests\UserManagementTest.class
+OrangeHRM\Cucumber\RegressionTestRunner.class
+OrangeHRM\TestComponents\BaseTest.class
+OrangeHRM\TestComponents\RetryAnalyzer.class
+OrangeHRM\TestComponents\TestListener.class
+OrangeHRM\StepDefintions\StepDeifnitionsBase.class

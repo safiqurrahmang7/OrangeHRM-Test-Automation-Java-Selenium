@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.*;
+import java.util.stream.Collectors;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -30,12 +31,22 @@ public class BaseTest {
 
 	public WebDriver driver;
 	public LoginPage login;
+	public static Properties properties;
+	
+	static {
+		
+		try {
+			properties = new Properties();
+			FileInputStream input = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\OrangeHRM\\resuorces\\Global.properties");
+			properties.load(input);
+		}
+		catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
 	public WebDriver driverInitializer() throws IOException {
 		
-		Properties property = new Properties();
-		FileInputStream input = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\OrangeHRM\\resuorces\\Global.properties");
-		property.load(input);
-		String browserName = property.getProperty("browser");
+		String browserName = properties.getProperty("browser");
 		
 		if (browserName.equalsIgnoreCase("Chrome")){
 			
@@ -82,26 +93,43 @@ public class BaseTest {
     	return System.getProperty("user.dir")+"//reports//"+TestCaseName+".png";
     	
     }
-	public List<HashMap<String,String>> jsonReader(String path) throws IOException{
+	
+	public List<Object[]> employee_lists() {
 		
-		String content = FileUtils.readFileToString(new File(path),StandardCharsets.UTF_8);
-		ObjectMapper mapper = new ObjectMapper();
-		List<HashMap<String,String>> data = mapper.readValue(content, new TypeReference<List<HashMap<String,String>>>() {
-		});
+		 List<Object[]> employees = new ArrayList<>();
+
+	        
+	        int employeeIndex = 1;
+	        while (properties.containsKey("employee" + employeeIndex + ".username")) {
+	            String prefix = "employee" + employeeIndex;
+	            String name = properties.getProperty(prefix + ".username", "Unknown");
+	            boolean hasLogin = Boolean.parseBoolean(properties.getProperty(prefix + ".has_login", "false"));
+	            String password = properties.getProperty(prefix + ".password", "N/A");
+
+	            employees.add(new Object[]{name, hasLogin,password});
+	            employeeIndex++;
+	        }
+	        
+	        return employees;
 		
-		return data;
+	}
 		
+	
+	
+	@DataProvider
+	public Object[][] EmployeeData() throws IOException {
 		
+		 List<Object[]> employees =employee_lists();
+
+	        return employees.toArray(new Object[employees.size()][]);
 	}
 	
 	@DataProvider
-	public Object[][] getData() throws IOException {
-		List<HashMap<String,String>> data = jsonReader(System.getProperty("user.dir")+"\\src\\test\\java\\OrangeHRM\\Data\\admin.json"); 
-		return new Object[][] {
-				{data.get(0)},
-				{data.get(1)},
-				{data.get(2)},
+	public Object[][] AdminData() throws IOException {
 		
-		};
+		List<Object[]> employees =employee_lists();
+        List<Object[]> admin = employees.stream().filter(emp-> !(boolean)emp[1]).collect(Collectors.toList());
+
+        return admin.toArray(new Object[admin.size()][]);
 	}
 }

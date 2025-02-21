@@ -8,10 +8,9 @@ import io.cucumber.testng.CucumberOptions;
 		glue = "OrangeHRM.StepDefintions",
 		monochrome = true,
 		tags = "@Regression",
-		plugin = {"pretty",
-		  "html:target/cucumber-reports/cucumber.html"}
+		plugin = { "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
 		)
-public class RegressionTestRunner extends AbstractTestNGCucumberTests{
+public class RegressionTestRunner extends AbstractTestNGCucumberTests {
 
 	
 

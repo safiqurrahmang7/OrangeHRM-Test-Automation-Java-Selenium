@@ -41,7 +41,8 @@ public class StepDeifnitionsBase extends BaseTest{
 		String first_name = name[0];
 		String middle_name =  name[1];
 		String last_name = name.length==3 ? name[2]:null;
-		pim.add_employee_without_userName(first_name, middle_name, last_name);
+		pim.create_emp_details(first_name, middle_name, last_name);
+		pim.save_emp();
 	}
 	
 	@When ("create the Admin with username {string}")

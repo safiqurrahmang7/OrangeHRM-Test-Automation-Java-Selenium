@@ -2,72 +2,103 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-17T16:31:50 IST" name="Suite" finished-at="2025-02-17T16:33:04 IST" duration-ms="74633">
+  <suite started-at="2025-02-21T23:25:18 IST" name="Surefire suite" finished-at="2025-02-21T23:26:08 IST" duration-ms="49900">
     <groups>
       <group name="Purchase">
-        <method signature="AdminCreation.UserCreationTest(java.util.HashMap)[pri:0, instance:OrangeHRM.Tests.AdminCreation@1040be71]" name="UserCreationTest" class="OrangeHRM.Tests.AdminCreation"/>
+        <method signature="UserManagementTest.createEmployeeTest(java.lang.String,boolean,java.lang.String)[pri:0, instance:OrangeHRM.Tests.UserManagementTest@7d0b7e3c]" name="createEmployeeTest" class="OrangeHRM.Tests.UserManagementTest"/>
+        <method signature="UserManagementTest.createAdminTest(java.lang.String,boolean,java.lang.String)[pri:0, instance:OrangeHRM.Tests.UserManagementTest@7d0b7e3c]" name="createAdminTest" class="OrangeHRM.Tests.UserManagementTest"/>
       </group> <!-- Purchase -->
     </groups>
-    <test started-at="2025-02-17T16:31:50 IST" name="Test" finished-at="2025-02-17T16:33:04 IST" duration-ms="74633">
-      <class name="OrangeHRM.Tests.AdminCreation">
-        <test-method is-config="true" signature="setup()[pri:0, instance:OrangeHRM.Tests.AdminCreation@1040be71]" started-at="2025-02-17T16:31:50 IST" name="setup" finished-at="2025-02-17T16:31:56 IST" duration-ms="6153" status="PASS">
+    <test started-at="2025-02-21T23:25:18 IST" name="Surefire test" finished-at="2025-02-21T23:26:08 IST" duration-ms="49900">
+      <class name="OrangeHRM.Tests.UserManagementTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:OrangeHRM.Tests.UserManagementTest@7d0b7e3c]" started-at="2025-02-21T23:25:18 IST" name="setup" finished-at="2025-02-21T23:25:24 IST" duration-ms="6599" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="UserCreationTest(java.util.HashMap)[pri:0, instance:OrangeHRM.Tests.AdminCreation@1040be71]" started-at="2025-02-17T16:31:56 IST" name="UserCreationTest" data-provider="getData" finished-at="2025-02-17T16:32:16 IST" duration-ms="20357" status="PASS">
+        <test-method signature="createEmployeeTest(java.lang.String,boolean,java.lang.String)[pri:0, instance:OrangeHRM.Tests.UserManagementTest@7d0b7e3c]" started-at="2025-02-21T23:25:24 IST" name="createEmployeeTest" data-provider="EmployeeData" finished-at="2025-02-21T23:25:34 IST" duration-ms="9805" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{userName=John Michael Smith}]]>
+                <![CDATA[John Michael Smith]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin123]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UserCreationTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:OrangeHRM.Tests.AdminCreation@1040be71]" started-at="2025-02-17T16:32:16 IST" name="tearDown" finished-at="2025-02-17T16:32:17 IST" duration-ms="242" status="PASS">
+        </test-method> <!-- createEmployeeTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:OrangeHRM.Tests.UserManagementTest@7d0b7e3c]" started-at="2025-02-21T23:25:34 IST" name="tearDown" finished-at="2025-02-21T23:25:34 IST" duration-ms="262" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:OrangeHRM.Tests.AdminCreation@1040be71]" started-at="2025-02-17T16:32:17 IST" name="setup" finished-at="2025-02-17T16:32:21 IST" duration-ms="4812" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:OrangeHRM.Tests.UserManagementTest@7d0b7e3c]" started-at="2025-02-21T23:25:34 IST" name="setup" finished-at="2025-02-21T23:25:40 IST" duration-ms="5650" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="UserCreationTest(java.util.HashMap)[pri:0, instance:OrangeHRM.Tests.AdminCreation@1040be71]" started-at="2025-02-17T16:32:21 IST" name="UserCreationTest" data-provider="getData" finished-at="2025-02-17T16:32:40 IST" duration-ms="18684" status="PASS">
+        <test-method signature="createEmployeeTest(java.lang.String,boolean,java.lang.String)[pri:0, instance:OrangeHRM.Tests.UserManagementTest@7d0b7e3c]" started-at="2025-02-21T23:25:40 IST" name="createEmployeeTest" data-provider="EmployeeData" finished-at="2025-02-21T23:25:47 IST" duration-ms="7273" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{userName=Emily Rose Johnson}]]>
+                <![CDATA[John Dustin Trudo]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin123]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UserCreationTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:OrangeHRM.Tests.AdminCreation@1040be71]" started-at="2025-02-17T16:32:40 IST" name="tearDown" finished-at="2025-02-17T16:32:40 IST" duration-ms="247" status="PASS">
+        </test-method> <!-- createEmployeeTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:OrangeHRM.Tests.UserManagementTest@7d0b7e3c]" started-at="2025-02-21T23:25:47 IST" name="tearDown" finished-at="2025-02-21T23:25:48 IST" duration-ms="277" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:OrangeHRM.Tests.AdminCreation@1040be71]" started-at="2025-02-17T16:32:40 IST" name="setup" finished-at="2025-02-17T16:32:45 IST" duration-ms="4607" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:OrangeHRM.Tests.UserManagementTest@7d0b7e3c]" started-at="2025-02-21T23:25:48 IST" name="setup" finished-at="2025-02-21T23:25:52 IST" duration-ms="4743" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="UserCreationTest(java.util.HashMap)[pri:0, instance:OrangeHRM.Tests.AdminCreation@1040be71]" started-at="2025-02-17T16:32:45 IST" name="UserCreationTest" data-provider="getData" finished-at="2025-02-17T16:33:04 IST" duration-ms="19000" status="PASS">
+        <test-method signature="createAdminTest(java.lang.String,boolean,java.lang.String)[pri:0, instance:OrangeHRM.Tests.UserManagementTest@7d0b7e3c]" started-at="2025-02-21T23:25:52 IST" name="createAdminTest" data-provider="AdminData" finished-at="2025-02-21T23:26:07 IST" depends-on-methods="OrangeHRM.Tests.UserManagementTest.createEmployeeTest" duration-ms="14898" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{userName=David Alexander Brown}]]>
+                <![CDATA[John Dustin Trudo]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin123]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UserCreationTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:OrangeHRM.Tests.AdminCreation@1040be71]" started-at="2025-02-17T16:33:04 IST" name="tearDown" finished-at="2025-02-17T16:33:04 IST" duration-ms="248" status="PASS">
+        </test-method> <!-- createAdminTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:OrangeHRM.Tests.UserManagementTest@7d0b7e3c]" started-at="2025-02-21T23:26:07 IST" name="tearDown" finished-at="2025-02-21T23:26:08 IST" duration-ms="329" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- OrangeHRM.Tests.AdminCreation -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- OrangeHRM.Tests.UserManagementTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
 </testng-results>

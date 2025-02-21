@@ -42,10 +42,23 @@ public class PIMPage extends PageComponents{
 	@FindBy(css=".oxd-text.oxd-text--h6.--strong")
 	WebElement name_label;
 	
+	@FindBy(xpath ="(//input[@autocomplete='off'])[1]")
+	WebElement user_name;
+	
+	@FindBy(xpath ="(//input[@autocomplete='off'])[2]")
+	WebElement password;
+	
+	@FindBy(xpath ="(//input[@autocomplete='off'])[3]")
+	WebElement confirm_password;
+	
+	@FindBy(css=".oxd-switch-input")
+	WebElement login_toggle;
+	
+	@FindBy(css=".oxd-toast--success")
+	WebElement toast_sucess;
 	
 	
-	
-	public void add_employee_without_userName(String firstName, String middleName, String lastName) throws InterruptedException {
+	public String create_emp_details(String firstName, String middleName, String lastName) {
 		
 		add_button.click();
 		first_name.sendKeys(firstName);
@@ -53,10 +66,23 @@ public class PIMPage extends PageComponents{
 		if (lastName != null) {
 		last_name.sendKeys(lastName);
 		}
-		employee_id.getText();
-		save_button.click();
-		Thread.sleep(2000);
+		return employee_id.getText();
 		
+	}
+	
+	public void create_login_details(String firstName){
+		login_toggle.click();
+		user_name.sendKeys(firstName+random_num());
+		password.sendKeys("admin123");
+		confirm_password.sendKeys("admin123");
+		
+	}
+
+	public String save_emp() throws InterruptedException {
+		
+		save_button.click();
+		element_visibility(toast_sucess);
+		return toast_sucess.getText();
 	}
 	
 	

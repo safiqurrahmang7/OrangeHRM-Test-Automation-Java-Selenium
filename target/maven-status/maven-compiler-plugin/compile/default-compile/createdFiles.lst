@@ -1,0 +1,5 @@
+OrangeHRM\PageObjects\DashBoardPage.class
+OrangeHRM\PageObjects\AdminPage.class
+OrangeHRM\PageObjects\LoginPage.class
+OrangeHRM\PageObjects\PIMPage.class
+OrangeHRM\AbstractComponents\PageComponents.class

@@ -4,10 +4,12 @@
 	<listeners>
 		<listener class-name="OrangeHRM.TestComponents.TestListener"></listener>
 	</listeners>
-  <test thread-count="5" name="Test">
+  <test name="Test">
     <classes>
-      
-      <class name="OrangeHRM.Tests.AdminCreation"/>
+           <class name="OrangeHRM.Tests.UserManagementTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
+
+
+
