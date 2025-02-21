@@ -42,7 +42,7 @@ public class AdminPage extends PageComponents{
 	WebElement user_field;
 	
 	@FindBy(xpath="(//input[@type='password'])[1]")
-	WebElement password;
+	WebElement Password;
 	
 	@FindBy(xpath="(//input[@type='password'])[2]")
 	WebElement confirm_password;
@@ -54,7 +54,7 @@ public class AdminPage extends PageComponents{
 	@FindBy(css=".oxd-toast--success")
 	WebElement toast_sucess;
 	
-	public void add_admin_with_userName(String name,String first_name) throws AWTException, InterruptedException {
+	public void add_admin_with_userName(String name,String first_name,String password) throws AWTException, InterruptedException {
 		
 		add_button.click();
 		user_role.click();
@@ -65,8 +65,8 @@ public class AdminPage extends PageComponents{
 		status.click();
 		dropdown_selection();
 		user_field.sendKeys(first_name+random_num());
-		password.sendKeys("admin123");
-		confirm_password.sendKeys("admin123");
+		Password.sendKeys(password);
+		confirm_password.sendKeys(password);
 		submit.click();
 		
 	}

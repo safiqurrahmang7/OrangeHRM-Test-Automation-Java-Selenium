@@ -51,7 +51,7 @@ public class UserManagementTest extends BaseTest{
 		String first_name = name[0];
 		DashBoardPage dashboard = login.LoginApplication("Admin","admin123");
 		AdminPage admin = dashboard.goToAdmin();
-		admin.add_admin_with_userName(fullName,first_name);
+		admin.add_admin_with_userName(fullName,first_name,password);
 		String toast_message = admin.success_toast();
 		Boolean toaster_messager = toast_message.contains("Successfully Saved");
 		Assert.assertTrue(toaster_messager);
