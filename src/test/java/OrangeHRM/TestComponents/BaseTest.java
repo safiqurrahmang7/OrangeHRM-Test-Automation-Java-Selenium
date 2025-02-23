@@ -37,7 +37,7 @@ public class BaseTest {
 		
 		try {
 			properties = new Properties();
-			FileInputStream input = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\OrangeHRM\\resuorces\\Global.properties");
+			FileInputStream input = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\OrangeHRM\\resources\\Global.properties");
 			properties.load(input);
 		}
 		catch(IOException e) {
@@ -69,28 +69,16 @@ public class BaseTest {
 	
 	
 	
-	@BeforeMethod(alwaysRun=true)
-	public LoginPage setup() throws IOException {
-		driver = driverInitializer();
-		login = new LoginPage(driver);
-		login.sandbox();
-		return login;
-		
-	}
 	
-	@AfterMethod(alwaysRun=true)
-	public void tearDown() {
-		
-		driver.quit();
-	}
+	
 	
 	public String getScreenshot(String TestCaseName,WebDriver driver) throws IOException {
     	
     	TakesScreenshot ts = (TakesScreenshot)driver;
     	File source = ts.getScreenshotAs(OutputType.FILE);
-    	File file = new File(System.getProperty("user.dir")+"//reports//"+TestCaseName+".png");
+    	File file = new File(System.getProperty("user.dir")+"//reports//"+"//ExtentTestNG//"+TestCaseName+".png");
     	FileUtils.copyFile(source,file);
-    	return System.getProperty("user.dir")+"//reports//"+TestCaseName+".png";
+    	return System.getProperty("user.dir")+"//reports//"+"//ExtentTestNG//"+TestCaseName+".png";
     	
     }
 	

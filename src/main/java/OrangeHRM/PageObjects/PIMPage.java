@@ -58,29 +58,39 @@ public class PIMPage extends PageComponents{
 	WebElement toast_sucess;
 	
 	
-	public String create_emp_details(String firstName, String middleName, String lastName) {
-		
+			
+	
+	public void click_add_button() {
 		add_button.click();
+	}
+	public void enterFirstName(String firstName) {
 		first_name.sendKeys(firstName);
-		middle_name.sendKeys(middleName);
-		if (lastName != null) {
-		last_name.sendKeys(lastName);
-		}
-		return employee_id.getText();
-		
 	}
 	
-	public void create_login_details(String firstName){
+	public void enterLastName(String lastName) {
+		last_name.sendKeys(lastName);
+	}
+	public void click_save_button() {
+		save_button.click();
+	}
+	
+	
+	
+	public void toggle_login() {
 		login_toggle.click();
+	}
+	public void enter_username(String firstName) {
 		user_name.sendKeys(firstName+random_num());
-		password.sendKeys("admin123");
-		confirm_password.sendKeys("admin123");
-		
+	}
+	
+	public void enter_password(String Password) {
+		password.sendKeys(Password);
+		confirm_password.sendKeys(Password);
 	}
 
-	public String save_emp() throws InterruptedException {
+	public String Success_toast_message() throws InterruptedException {
 		
-		save_button.click();
+		
 		element_visibility(toast_sucess);
 		return toast_sucess.getText();
 	}

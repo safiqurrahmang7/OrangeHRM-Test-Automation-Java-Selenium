@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="OrangeHRM.Tests.UserManagementTest">
+      <class name="OrangeHRM.Tests.PIM">
         <methods>
-          <include name="createAdminTest"/>
-          <include name="tearDown"/>
+          <include name="create_employee_test" invocation-numbers="0 1"/>
           <include name="setup"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- OrangeHRM.Tests.UserManagementTest -->
+      </class> <!-- OrangeHRM.Tests.PIM -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

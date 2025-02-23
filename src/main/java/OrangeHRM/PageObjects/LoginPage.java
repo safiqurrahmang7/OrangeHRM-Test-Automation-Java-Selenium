@@ -33,12 +33,12 @@ public class LoginPage extends PageComponents {
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 	}
 	
-	public DashBoardPage LoginApplication(String UserName,String Password) {
+	public void LoginApplication(String UserName,String Password) {
 		
 		username.sendKeys(UserName);
 		password.sendKeys(Password);
 		loginButton.click();
-		return new DashBoardPage(driver);
+		
 		
 	}
 }

@@ -2,6 +2,8 @@ package OrangeHRM.TestComponents;
 
 import java.io.IOException;
 
+
+
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -11,7 +13,11 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import OrangeHRM.resuorces.ExtentreportNG;
+import OrangeHRM.resources.ExtentreportNG;
+
+
+
+
 
 public class TestListener extends BaseTest implements ITestListener{
 	
@@ -45,7 +51,7 @@ public class TestListener extends BaseTest implements ITestListener{
 			try {
 				path = getScreenshot(result.getMethod().getMethodName(),driver);
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			}
 			test.addScreenCaptureFromPath(path,result.getMethod().getMethodName());

@@ -1,14 +1,14 @@
-package OrangeHRM.Cucumber;
+package OrangeHRM.Cucumber.Runners;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-		features = "src/test/java/OrangeHRM/Cucumber",
-		glue = "OrangeHRM.StepDefintions",
+		features = "src/test/java/OrangeHRM/Cucumber/Features",
+		glue = "OrangeHRM.Cucumber.StepDefinitions",
 		monochrome = true,
 		tags = "@Regression",
-		plugin = { "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
+		plugin = { "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 		)
 public class RegressionTestRunner extends AbstractTestNGCucumberTests {
 

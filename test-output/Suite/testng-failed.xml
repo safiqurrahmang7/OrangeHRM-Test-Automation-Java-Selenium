@@ -6,14 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="OrangeHRM.Tests.UserManagementTest">
+      <class name="OrangeHRM.Tests.PIM_Test">
         <methods>
-          <include name="createAdminTest" invocation-numbers="0"/>
+          <include name="create_employee_test" invocation-numbers="0 1"/>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="createEmployeeTest"/>
         </methods>
-      </class> <!-- OrangeHRM.Tests.UserManagementTest -->
+      </class> <!-- OrangeHRM.Tests.PIM_Test -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

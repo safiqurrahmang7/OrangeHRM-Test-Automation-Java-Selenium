@@ -37,18 +37,13 @@ public class PageComponents {
 		menu_item.click();
 	}
 	
-	public PIMPage goToPIM() {
-			
-			menuItem_selection("PIM");
-			return new PIMPage(driver);
-			
-		}
-	
-	public AdminPage goToAdmin() {
-		
-		menuItem_selection("Admin");
-		return new AdminPage(driver);
-		
+	public <T> T goTo(String module, Class<T> pageClass) {
+	    menuItem_selection(module);
+	    try {
+	        return pageClass.getConstructor(WebDriver.class).newInstance(driver);
+	    } catch (Exception e) {
+	        throw new RuntimeException("Failed to navigate to: " + module, e);
+	    }
 	}
 	
 	public void dropdown_selection() throws AWTException {
