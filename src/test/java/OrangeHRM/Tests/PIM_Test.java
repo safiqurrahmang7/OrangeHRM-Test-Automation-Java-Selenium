@@ -62,7 +62,7 @@ public class PIM_Test extends BaseTest {
 		}
 		pimPage.click_save_button();
 		String successMessage = pimPage.Success_toast_message();
-		Assert.assertTrue(successMessage.contains("Successfully SaveD"));		
+		Assert.assertTrue(successMessage.contains("Successfully Saved"));		
 	}
 	
 	
